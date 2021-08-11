@@ -20,7 +20,7 @@ header.tweet {
   justify-content: space-between;
 }
 
-.username {
+.handle {
   opacity: 0.8;
   font-weight: bold;
   color: lightskyblue;
@@ -31,7 +31,7 @@ div.tweet {
   flex-direction: row;
 }
 
-main.tweet {
+main.content {
   min-height: 120px;
   width: 95%;
   word-wrap: break-word;
@@ -42,8 +42,9 @@ main.tweet {
   padding: 10px 15px 10px 15px;
 }
 
-.profilepic {
+.avatars {
   margin-right: 15px;
+  align-self: center;
 }
 
 footer {
@@ -70,7 +71,7 @@ footer div :hover {
   color: lightskyblue;
 }
 
-p.date {
+p.created_at {
   margin: 7px;
   display: flex;
   align-items: flex-end;
