@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -49,25 +50,46 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        
+
         <form action="/tweets" method="POST">
-          
           <label for="tweet-text"></label>
           <input name="text" id="tweet-text" placeholder="What are you humming about?"></input>
-         
-          <div class="tweet-footer">
+          <div class="new-tweet-footer">
             <button type="submit"><span>Tweet</span></button>
             <output name="counter" class="counter" r="twfoeet-text">140</output>
           </div>
-        
         </form>
+        
+        <article class="tweet">
+          <header class="tweet">
+            <div class="tweet">
+              <p class="profilepic">profilepic</p>
+              <p>name</p>
+            </div>
+            <p class="username">@briansohn</p>
+          </header>
+
+          <main class="tweet">
+            Sample tweet before styling!
+          </main>
+
+
+          <footer class="tweet">
+            <p class="date">date</p>
+            <div class="icons">
+              <div class="flag"><i class="fas fa-flag"></i></div>
+              <div class="retweet"><i class="fas fa-retweet"></i></div>
+              <div class="like"><i class="fas fa-heart"></i></div>  
+            </div>
+          </footer>
+
+        </article>
+        
+
+
       </section>
-
     </main>
-
   </body>
-
 </html>

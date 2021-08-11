@@ -1,0 +1,78 @@
+article {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: 5px solid gray;
+  display: flex;
+  flex-direction: column;
+}
+
+article:hover {
+  box-shadow: 7px 7px lightgray;
+}
+
+header.tweet {
+  padding: 25px;
+  height: 70px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.username {
+  opacity: 0.8;
+  font-weight: bold;
+  color: lightskyblue;
+}
+
+div.tweet {
+  display: flex;
+  flex-direction: row;
+}
+
+main.tweet {
+  height: 120px;
+  width: 95%;
+  border: none;
+  border-bottom: 4px solid gray;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 30px;
+  padding-left: 15px;
+}
+
+.profilepic {
+  margin-right: 15px;
+}
+
+footer {
+  font-size: 18px;
+  padding-right: 25px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.icons {
+  margin: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+footer div + div {
+  padding-left: 5px;
+}
+
+footer div :hover {
+  color: lightskyblue;
+}
+
+p.date {
+  margin: 7px;
+  display: flex;
+  align-items: flex-end;
+}
+
