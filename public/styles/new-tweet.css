@@ -19,6 +19,11 @@ section.new-tweet {
   margin: 10px 0;
   border: none;
   border-bottom: 4px solid gray;
+  background-color: #f4f1ec;
+}
+
+#tweet-text:focus {
+  background: white;
 }
 
 button:hover {

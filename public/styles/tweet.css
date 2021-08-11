@@ -32,14 +32,14 @@ div.tweet {
 }
 
 main.tweet {
-  height: 120px;
+  min-height: 120px;
   width: 95%;
+  word-wrap: break-word;
   border: none;
   border-bottom: 4px solid gray;
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 30px;
-  padding-left: 15px;
+  align-items: center;
+  padding: 10px 15px 10px 15px;
 }
 
 .profilepic {
