@@ -25,9 +25,13 @@ button:hover {
   background-color: gray;
 }
 
-div.footer {
+div.tweet-footer {
   font-family: "Bungee", cursive;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.max-tweet {
+  color: red;
 }
