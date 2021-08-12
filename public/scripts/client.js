@@ -6,6 +6,12 @@
 
 $(document).ready(function() {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const fetchTweets = () => {
     $.ajax({
       url: '/tweets',
@@ -89,7 +95,7 @@ $(document).ready(function() {
     </header>
 
     <main class="content">
-      ${tweetData.content.text}
+      ${escape(tweetData.content.text)}
     </main>
 
     <footer class="tweet">
