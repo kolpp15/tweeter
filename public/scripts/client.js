@@ -23,15 +23,22 @@ $(document).ready(function() {
 
   $('#submit-tweet').on('submit', function(event) {
     event.preventDefault();
-    console.log('THE FORM IS SUBMITTED!!!');
-
     const serializedData = $(this).serialize();
-    console.log('This is the serialized data: ', serializedData);
+    const $tweetText = $('#tweet-text');
+    const tweetLength = $tweetText.val().length;
 
-    $.post('/tweets', serializedData, (response) => {
-      console.log(response);
-      fetchTweets();
-    });
+    if (tweetLength > 140) {
+      alert('YOUR TWEET IS TOO LONG!');
+    } else if (tweetLength < 0 || $tweetText.val() === '') {
+      alert('YOUR TWEET IS EMPTY!');
+    } else {
+      $.post('/tweets', serializedData, (response) => {
+        console.log('THE FORM IS SUBMITTED!!!');
+        console.log('This is the serialized data: ', serializedData);
+        console.log('success', response);
+        fetchTweets();
+      });
+    }
   });
 
   const data = [
