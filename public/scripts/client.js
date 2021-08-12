@@ -4,8 +4,35 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 $(document).ready(function() {
+
+  const fetchTweets = () => {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      success: (data) => {
+        console.log('Initial data posting :', data);
+        renderTweets(data);
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  };
+  fetchTweets();
+
+  $('#submit-tweet').on('submit', function(event) {
+    event.preventDefault();
+    console.log('THE FORM IS SUBMITTED!!!');
+
+    const serializedData = $(this).serialize();
+    console.log('This is the serialized data: ', serializedData);
+
+    $.post('/tweets', serializedData, (response) => {
+      console.log(response);
+      fetchTweets();
+    });
+  });
 
   const data = [
     {
@@ -34,9 +61,11 @@ $(document).ready(function() {
   
   // iterating through initial data and rendering
   const renderTweets = function(tweets) {
+    $('#tweets-container').empty();
+
     for (const tweet of tweets) {
       const $newTweet = createTweetElement(tweet);
-      $('#tweets-container').append($newTweet);
+      $('#tweets-container').prepend($newTweet);
     }
   };
 

@@ -57,19 +57,19 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
 
-        <form action="/tweets" method="POST">
+        <form id="submit-tweet" action="/tweets" method="POST">
           <label for="tweet-text"></label>
           <input name="text" id="tweet-text" placeholder="What are you humming about?"></input>
 
           <div class="new-tweet-footer">
-            <button type="submit"><span>Tweet</span></button>
-            <output name="counter" class="counter" r="twfoeet-text">140</output>
+            <button id="tweet-button" type="submit"><span>Tweet</span></button>
+            <output name="counter" class="counter" r="tweet-text">140</output>
           </div>
         </form>
-        
-      <div id="tweets-container">
-        
-      </div>
+      
+      <!-- rendered from client.js  -->
+      <div id="tweets-container"></div>
+
       </section>
     </main>
   </body>
