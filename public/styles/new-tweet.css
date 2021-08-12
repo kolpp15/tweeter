@@ -3,6 +3,16 @@ section.new-tweet {
   flex-direction: column;
 }
 
+div#errors p {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  border: 3px solid red;
+  padding: 5px;
+  display: none;
+}
+
 .new-tweet button {
   background-color: #4056A1;
   color: #FFFFFF;

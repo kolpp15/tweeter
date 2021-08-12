@@ -57,6 +57,11 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
 
+        <div id="errors">
+          <p id="empty-tweet">&#9940;&nbsp;&nbsp;Your tweet is empty. Please add a tweet!&nbsp;&nbsp;&#9940;</p>
+          <p id="exceed-max-tweet">&#9940;&nbsp;&nbsp;You have exceeded the maximum tweet!&nbsp;&nbsp;&#9940;</p>
+        </div>
+
         <form id="submit-tweet" action="/tweets" method="POST">
           <label for="tweet-text"></label>
           <input name="text" id="tweet-text" placeholder="What are you humming about?"></input>
@@ -65,6 +70,7 @@
             <button id="tweet-button" type="submit"><span>Tweet</span></button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
+
         </form>
       
       <!-- rendered from client.js  -->

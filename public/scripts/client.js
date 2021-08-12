@@ -4,14 +4,17 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// DOCUMENT READY
 $(document).ready(function() {
 
+  // ESCAPE FUNCTION TO PREVENT XSS
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // AJAX GET / LOADING TWEETS
   const fetchTweets = () => {
     $.ajax({
       url: '/tweets',
@@ -27,6 +30,7 @@ $(document).ready(function() {
   };
   fetchTweets();
 
+  // AJAX POST / SUBMIT
   $('#submit-tweet').on('submit', function(event) {
     event.preventDefault();
     const serializedData = $(this).serialize();
@@ -34,45 +38,23 @@ $(document).ready(function() {
     const tweetLength = $tweetText.val().length;
 
     if (tweetLength > 140) {
-      alert('YOUR TWEET IS TOO LONG!');
-    } else if (tweetLength < 0 || $tweetText.val() === '') {
-      alert('YOUR TWEET IS EMPTY!');
+      $('#empty-tweet').slideUp();
+      $('#exceed-max-tweet').slideDown();
+    } else if ($tweetText.val() === '') {
+      $('#empty-tweet').slideDown();
+      $('#exceed-max-tweet').slideUp();
     } else {
       $.post('/tweets', serializedData, (response) => {
         console.log('THE FORM IS SUBMITTED!!!');
         console.log('This is the serialized data: ', serializedData);
         console.log('success', response);
+        $('#errors').slideUp('fast');
         fetchTweets();
       });
     }
   });
-
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
   
-  // iterating through initial data and rendering
+  // ITERATE AND RENDER TWEETS IN HTML FORMAT
   const renderTweets = function(tweets) {
     $('#tweets-container').empty();
 
@@ -82,7 +64,7 @@ $(document).ready(function() {
     }
   };
 
-  // appending new tweets function
+  // RETURNING HTML FORMAT BASED ON THE DATA
   const createTweetElement = function(tweetData) {
     const $newTweet = `
     <article class="tweet">
@@ -112,5 +94,4 @@ $(document).ready(function() {
     return $newTweet;
   };
 
-  renderTweets(data);
 });
