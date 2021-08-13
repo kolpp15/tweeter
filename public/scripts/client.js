@@ -104,4 +104,6 @@ $(document).ready(function() {
   };
   openTweet();
 
+  
+
 });
