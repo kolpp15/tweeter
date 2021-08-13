@@ -21,6 +21,7 @@ div#errors p {
   padding-left: 10px;
   padding-right: 10px;
   border: none;
+  border-radius: 10px;
 }
 
 #tweet-text {

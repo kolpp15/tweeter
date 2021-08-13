@@ -1,4 +1,4 @@
-nav {
+/* nav {
   height: 80px;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -10,7 +10,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-}
+} */
 
 nav span {
   font-family: 'Bungee', cursive;

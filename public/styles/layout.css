@@ -21,14 +21,90 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
- main {
+main {
    width: 90%;
    background-color: #f4f1ec;
    margin: auto;
- }
+}
+
+/* 
+RESPONSIVE DESIGN
+*/
 
 
+/* mobile friendly! */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  nav {
+    height: 60px;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  header.body-header {
+    padding-bottom: 20px;
+  }
+}
+
+/* tablet friendly! */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    height: 80px;
+    background-color: lightgray;
+    background-image: url(../images/background-image.png);
+    color: #4056A1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* desktop friendly! */
+@media only screen and (min-width: 1024px) {
+  nav {
+    height: 80px;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  header.body-header {
+    padding-top: 340px;
+    margin: 110px 20px 10px 30px;
+    height: 200px;
+    width: 33%;
+    float: left;
+    border-radius: 10px;
+  }
+  .tweets-container {
+    width: 67%;
+    float: right;
+  }
+  .new-tweet {
+    margin: 80px 30px 10px 20px;
+  }
+}

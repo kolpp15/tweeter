@@ -8,7 +8,7 @@
 $(document).ready(function() {
 
   // ESCAPE FUNCTION TO PREVENT XSS
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -49,6 +49,7 @@ $(document).ready(function() {
         console.log('This is the serialized data: ', serializedData);
         console.log('success', response);
         $('#errors').slideUp('fast');
+        $tweetText.val('').empty();
         fetchTweets();
       });
     }

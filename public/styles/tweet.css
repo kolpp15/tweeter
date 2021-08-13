@@ -2,6 +2,7 @@ article {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   border: 5px solid gray;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
 }
