@@ -96,4 +96,12 @@ $(document).ready(function() {
     return $newTweet;
   };
 
+  // CLICK RIGHT NAV, SLIDETOGGLE TWEETBOX
+  const openTweet = function() {
+    $('.navRight').on('click', () => {
+      $('#submit-tweet').slideToggle();
+    });
+  };
+  openTweet();
+
 });

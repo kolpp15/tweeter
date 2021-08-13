@@ -24,6 +24,10 @@ div#errors p {
   border-radius: 10px;
 }
 
+#submit-tweet {
+  display: none;
+}
+
 #tweet-text {
   width: 100%;
   padding: 10px;
