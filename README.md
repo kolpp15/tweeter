@@ -5,11 +5,11 @@ Tweeter is a simple, single-page Twitter clone.
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
 ## Highlights
-- Desktop, Tablet, and Mobile friendly interface
+- Desktop, Tablet, and Mobile friendly interfaces.
 - From the homepage, tweet-box will open when clicking the animated arrow in the top right nav bar.
 - Warning messages slides if your tweet is empty or goes over 140 characters.
 - Box shadows when hovering over previous tweets.
-- Icons highlights when hovering over the three icons in the previous tweet box.
+- Icons highlights when hovering over the three icons in the previous tweet boxes.
 - Tweets are prevented from XSS.
 
 
