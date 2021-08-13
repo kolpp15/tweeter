@@ -50,6 +50,7 @@ $(document).ready(function() {
         console.log('success', response);
         $('#errors').slideUp('fast');
         $tweetText.val('').empty();
+        $('.counter').val(140);
         fetchTweets();
       });
     }
